@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "2ef3176b-233b-458d-a893-cfe07c26ed0c",
+		"name": "limeTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "store meeting data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/chamo/Downloads/freebusy.txt"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://limetest.test:8080/api/file-upload",
+					"protocol": "http",
+					"host": [
+						"limetest",
+						"test"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"file-upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get available meetings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "emp_id",
+							"value": "57646786307395936680161735716561753784,259939411636051033617118653993975778241",
+							"type": "default"
+						},
+						{
+							"key": "schedule_from",
+							"value": "2015-01-02 08:00:00",
+							"type": "default"
+						},
+						{
+							"key": "schedule_to",
+							"value": "2015-01-05 17:00:00",
+							"type": "default"
+						},
+						{
+							"key": "meeting_duration",
+							"value": "01:00",
+							"type": "default"
+						},
+						{
+							"key": "meeting_slot",
+							"value": "01:00",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://limetest.test:8080/api/available-slots",
+					"protocol": "http",
+					"host": [
+						"limetest",
+						"test"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"available-slots"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
